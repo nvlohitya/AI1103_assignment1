@@ -1,0 +1,92 @@
+\documentclass[12pt]{journal}
+\author{Nanduri Venkat Lohitya-MS20BTECH11015}
+\twocolumn
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\begin{document}
+\title{AI1103 : Assignment 1}
+\maketitle
+
+
+\section{Problem}
+A card from a a pack of 52 cards is lost.\\From the remaining cards of the pack,two cards are drawn and are found to be both diamonds.Find the probability of the lost card being a diamond.
+
+\section{Solution}
+Let A1 be the probability that a diamond card is lost.\\
+Let A2 be the probability that a card other then diamond is lost.\\
+Let A be the probability that two cards are drawn and both are found to be diamonds.\\
+
+
+We know by Bayer's Formula:\\eq 2.1
+$$ P\left(\frac{A1}{A}\right) = \frac{P(A1).P\left(\frac{A}{A1}\right)}{P(A)}$$\\
+
+Also we know by the theorem of total probability that :\\eq 2.2
+
+$$ P(A) = P(A1).P\left(\frac{A}{A1}\right) + P(A2).P\left(\frac{A}{A2}\right) $$
+
+Now we know that:\\eq 2.3
+$$ P(A1) = \left(\frac{1}{4}\right)$$ eq 2.4\\
+
+$$ P(A2) = \left(\frac{3}{4}\right)\\$$ eq 2.5\\
+
+$$P\left(\frac{A}{A1}\right) = \left(\frac{12C2}{51C2}\right)\\$$ eq 2.6\\
+$$P\left(\frac{A}{A2}\right) = \left(\frac{13C2}{51C2}\right)\\$$ 
+
+From eq 2.2,2.3,2.4,2.5,2.6 we get:\\ eq 2.7
+$$P(A) =  \left(\frac{1}{4}\right).\left(\frac{12C2}{51C2}\right) +\left(\frac{3}{4}\right).\left(\frac{13C2}{51C2}\right) $$
+
+
+
+Now by using Bayes theorem (eq 2.1) we get:\\
+$$ P\left(\frac{A1}{A}\right) = \frac{\frac{1}{4}.\left(\frac{12C2}{51C2}\right)}{P(A)}$$\\
+
+$$ P\left(\frac{A1}{A}\right) = \frac{\frac{1}{4}.\left(\frac{12C2}{51C2}\right)}{\left(\frac{1}{4}\right).\left(\frac{12C2}{51C2}\right) +\left(\frac{3}{4}\right).\left(\frac{13C2}{51C2}\right)} $$\\
+
+Now after simplifying we get:\\\\
+$$P\left(\frac{A1}{A}\right) = \left(\frac{12C2}{12C2+3.13C2}\right)$$\\
+
+Hence after simplifying we get:\\Ans
+ $$ P \left(\frac{A1}{A}\right) = \left(\frac{11}{50}\right) = 0.22$$\\
+
+\end{document}
